@@ -44,6 +44,8 @@ site: http://www.cs.unipr.it/ppl/ . */
 #include "ppl-sparc64.hh"
 #elif defined(__sparc__)
 #include "ppl-sparc.hh"
+#elif defined(__mips__)
+#include "ppl-mipsel.hh"
 #else
 #error "This architecture is not supported by the currently installed ppl-devel packages."
 #endif
