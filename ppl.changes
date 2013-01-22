@@ -1,3 +1,6 @@
+* Tue Jan 22 2013 Oleg Girko <ol+mer@infoserver.ru> - 0.10.2
+- Add default handling for any arch other than arm, i386 or mips.
+
 * Sat Jan 21 2012 Carsten Munk <carsten.munk@gmail.com> - 0.10.2
 - Add MIPS support
 

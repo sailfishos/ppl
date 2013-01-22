@@ -181,12 +181,16 @@ rm -f %{buildroot}%{_libdir}/*.la %{buildroot}%{_libdir}/%{name}/*.la
 
 %ifarch %{arm}
 normalized_arch=arm
-%endif
+%else
 %ifarch %{ix86}
 normalized_arch=i386
-%endif
+%else
 %ifarch mipsel
 normalized_arch=mipsel
+%else
+normalized_arch=%{_arch}
+%endif
+%endif
 %endif
 
 mv %{buildroot}/%{_includedir}/ppl.hh %{buildroot}/%{_includedir}/ppl-${normalized_arch}.hh
