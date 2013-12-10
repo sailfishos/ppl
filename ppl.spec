@@ -153,7 +153,7 @@ CPPFLAGS="$CPPFLAGS -I%{_includedir}/Yap"
 
 CXXFLAGS=`echo $RPM_OPT_FLAGS|sed -e 's/-floop-interchange//g' -e 's/-floop-strip-mine//g' -e 's/-floop-block//g' -e 's/-ftree-loop-distribution//g'`
 export CXXFLAGS
-%configure --docdir=%{_datadir}/doc/%{name}-%{version} --enable-shared --disable-rpath --enable-interfaces="c++ c" CPPFLAGS="$CPPFLAGS"
+%configure --docdir=%{_datadir}/doc/%{name}-%{version} --enable-shared --disable-rpath --enable-interfaces="c++ c" CPPFLAGS="$CPPFLAGS -fpermissive"
 sed -i 's|^hardcode_libdir_flag_spec=.*|hardcode_libdir_flag_spec=""|g' libtool
 sed -i 's|^runpath_var=LD_RUN_PATH|runpath_var=DIE_RPATH_DIE|g' libtool
 sed -i 's|^hardcode_libdir_flag_spec=.*|hardcode_libdir_flag_spec=""|g' Watchdog/libtool
