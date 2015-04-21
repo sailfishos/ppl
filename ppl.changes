@@ -1,3 +1,6 @@
+* Tue Dec 10 2013 Carsten Munk <carsten.munk@jollamobile.com> - 0.10.2
+- Add -fpermissive MER#909
+
 * Tue Jan 22 2013 Oleg Girko <ol+mer@infoserver.ru> - 0.10.2
 - Add default handling for any arch other than arm, i386 or mips.
 
